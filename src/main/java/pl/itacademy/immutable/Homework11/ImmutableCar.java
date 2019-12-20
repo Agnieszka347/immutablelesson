@@ -15,7 +15,11 @@ public final class ImmutableCar {
         this.manufacturer = manufacturer;
         this.model = model;
         this.engine = copyEngine(engine);
-        this.wheels = wheels ;
+        this.wheels = copyWheel (wheels) ;
+    }
+    
+    private Wheel copyWheel(Wheel wheels) {
+        return new Wheel(wheels.getRadius(),wheels.getWidth());
     }
 
 
