@@ -26,9 +26,9 @@ public class ImmutableCarTester {
         wheels.add(wheel3);
 
 
-        ImmutableCar opel = ImmutableCar.createImmutableCar("Opel", "Astra", diesel, wheels);
-        ImmutableCar kia = ImmutableCar.createImmutableCar("Kia", "Niro", hybrid, wheels);
-        ImmutableCar fiat = ImmutableCar.createImmutableCar("Fiat", "126", electric, wheels);
+        ImmutableCar opel = ImmutableCar.createImmutableCar("Opel", "Astra", diesel, wheel1);
+        ImmutableCar kia = ImmutableCar.createImmutableCar("Kia", "Niro", hybrid, wheel2);
+        ImmutableCar fiat = ImmutableCar.createImmutableCar("Fiat", "126", electric, wheel3);
 
         createImmutableCar.put(opel, "Opel");
         createImmutableCar.put(kia, "Kia");
