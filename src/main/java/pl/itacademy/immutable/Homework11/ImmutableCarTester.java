@@ -35,7 +35,12 @@ public class ImmutableCarTester {
         createImmutableCar.put(fiat, "Fiat");
 
         System.out.println("Cars " + createImmutableCar);
-
+        System.out.println(opel);
+        System.out.println(opel.hashCode());
+        System.out.println(kia);
+        System.out.println(kia.hashCode());
+        System.out.println(fiat);
+        System.out.println(fiat.hashCode());
        
 
         Field model = opel.getClass().getDeclaredField("model");
@@ -47,7 +52,14 @@ public class ImmutableCarTester {
         opel.getEngine().setHorsePower(250);
         kia.getEngine().setVolume(300);
         fiat.getEngine().setType("Hybrid");
-
-        System.out.println("Cars after change engine "+createImmutableCar );
+        fiat.getWheels().setRadius(120);
+        kia.getWheels().setWidth(10);
+        
+       System.out.println("Cars after change engine and wheel "+createImmutableCar );
+        
+        System.out.println(opel.hashCode());
+        System.out.println(kia.hashCode());
+        System.out.println(fiat.hashCode());
+        
     }
 }
