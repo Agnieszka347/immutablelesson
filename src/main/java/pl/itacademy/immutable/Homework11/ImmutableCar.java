@@ -44,7 +44,7 @@ public final class ImmutableCar {
     }
 
     public Wheel getWheels() {
-        return wheels;
+        return copyWheel (wheels);
     }
 
     @Override
