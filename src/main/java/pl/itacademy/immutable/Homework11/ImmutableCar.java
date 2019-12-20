@@ -39,16 +39,8 @@ public final class ImmutableCar {
         return new Engine (engine.getType(), engine.getHorsePower(), engine.getVolume());
     }
 
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
-
     public List<Wheel> getWheels() {
         return wheels;
-    }
-
-    public void setWheels(List<Wheel> wheels) {
-        this.wheels = wheels;
     }
 
     @Override
