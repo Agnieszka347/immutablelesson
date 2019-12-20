@@ -36,9 +36,7 @@ public class ImmutableCarTester {
 
         System.out.println("Cars " + createImmutableCar);
 
-        kia.setEngine(diesel);
-
-        System.out.println("Car Kia after change engine " + createImmutableCar);
+       
 
         Field model = opel.getClass().getDeclaredField("model");
         model.setAccessible(true);
