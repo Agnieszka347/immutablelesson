@@ -9,17 +9,17 @@ public final class ImmutableCar {
     private final String manufacturer;
     private final String model;
     private Engine engine;
-    private List<Wheel> wheels;
+    private Wheel wheels;
 
-    private ImmutableCar(String manufacturer, String model,Engine engine, List<Wheel> wheels) {
+    private ImmutableCar(String manufacturer, String model,Engine engine, Wheel wheels) {
         this.manufacturer = manufacturer;
         this.model = model;
         this.engine = copyEngine(engine);
-        this.wheels = Collections.unmodifiableList(wheels) ;
+        this.wheels = wheels ;
     }
 
 
-    public static ImmutableCar createImmutableCar(String manufacturer, String model, Engine engine, List<Wheel> wheels) {
+    public static ImmutableCar createImmutableCar(String manufacturer, String model, Engine engine, Wheel wheels) {
         return new ImmutableCar (manufacturer, model,engine, wheels);
     }
 
@@ -39,7 +39,7 @@ public final class ImmutableCar {
         return new Engine (engine.getType(), engine.getHorsePower(), engine.getVolume());
     }
 
-    public List<Wheel> getWheels() {
+    public Wheel getWheels() {
         return wheels;
     }
 
